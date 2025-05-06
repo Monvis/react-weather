@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4793FF;
+}
+
+.change_theme {
+    margin-right: 20px;
+}
+
