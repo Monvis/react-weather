@@ -1,0 +1,50 @@
+
+@import '../../../../styles/variables';
+
+.this__temp {
+    display: inline-block;
+    font-size: 96px;
+    font-weight: 500;
+    color: #4793FF;
+}
+
+.top__block {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.top__block_wrapper {
+    margin-right: 67px;
+}
+
+.bottom__block_wrapper {
+    font-size: 25px;
+    color: $dark-card-text-color;
+}
+
+.this__day {
+    max-height: 300px;
+    display: inline-block;
+    padding: 30px 20px 20px 20px;
+    box-shadow: $shadow-box;
+    border-radius: 20px;
+    background-color: $dark-card-bg;
+}
+
+.this__time {
+    margin-bottom: 15px;
+} 
+
+.this__day_day {
+    font-size: 40px;
+    color: $ligth;
+}
+
+.this__day_icon {
+
+    svg {
+        width: 120px;
+        height: 120px;
+    }
+}

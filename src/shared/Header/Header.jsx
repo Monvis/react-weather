@@ -27,15 +27,15 @@ export const Header = () => {
     <header className={s.header}>
       <div className={s.wrapper}>
         <div className={s.logo}>
-            <GlobalSvgSelector id='header-logo' />
+          <GlobalSvgSelector id='header-logo' />
         </div>
         <div className={s.title}>
-            <h1>React weather</h1>
+          <h1>React weather</h1>
         </div>
       </div>
       <div className={s.wrapper}>
         <div className={s.change_theme}>
-            <GlobalSvgSelector id='change-theme' />
+          <GlobalSvgSelector id='change-theme' />
         </div>
         <Select className={s.select} options={options} defaultValue={options[0]} styles={colourStyles} />
       </div>

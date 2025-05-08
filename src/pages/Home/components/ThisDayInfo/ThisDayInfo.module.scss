@@ -1,0 +1,58 @@
+
+@import '../../../../styles/variables';
+
+.this__day_info {
+    position: relative;
+    width: 100%;
+    margin-left: 50px;
+    padding: 42px 0 32px 42px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: $shadow-box;
+    background-color: $dark-card-bg;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 20px 0 0;
+    }
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    z-index: 10;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.indicator {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #FFF;
+    margin-right: 20px;
+
+    svg {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.indicator__name {
+    width: 100px;
+    margin-right: 20px;
+    color: $dark-card-text-color;
+}
+
+.indicator__title {
+    color: $ligth;
+}

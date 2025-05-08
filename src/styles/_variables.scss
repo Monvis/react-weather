@@ -3,3 +3,10 @@
     $maxWidth: $maxWidth - 320;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
+
+$dark: #0D1117;
+$ligth: #FFFFFF;
+$dark-card-bg: #4F4F4F;
+$dark-card-text-color: #939CB0;
+$light-card-bg: #4793FF;
+$shadow-box: 2px 5px 25px -3px rgb(180, 180, 180, 0.25);
