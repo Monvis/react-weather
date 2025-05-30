@@ -1,6 +1,6 @@
 import React from 'react'
 
-import s from './MonthStatisticts.module.scss'
+import s from './MonthStatistics.module.scss'
 
 export const MonthStatistics = () => {
   return (
