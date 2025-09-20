@@ -4,9 +4,50 @@
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 
-$dark: #0D1117;
-$ligth: #FFFFFF;
-$dark-card-bg: #4F4F4F;
-$dark-card-text-color: #939CB0;
-$light-card-bg: #4793FF;
-$shadow-box: 2px 5px 25px -3px rgb(180, 180, 180, 0.25);
+$primary-color: #4793FF;
+$base-color: #939CB0;
+
+$body-background-dark: #0D1117;
+$body-background-light: #FFFF;
+
+$components-background-light: #FFFFFF;
+$components-background-dark: #4f4f4f;
+
+$card-background-light: rgba(71, 147, 255, 0.2);
+$card-background-dark: #2E3035;
+
+$card-box-shadow-light: 0px 3px 20px rgba(5, 5, 5, 0.28);
+$card-box-shadow-dark: 0px 3px 20px rgba(147, 144, 144, 0.28);
+
+$light-color: #000;
+$dark-color: #FFFF;
+
+$body-background-light: #FFFFFF;
+$body-background-dark: #0D1117;
+
+:root {
+    //body-background
+    --body-background-dark: #{$body-background-dark};
+    --body-background-light: #{$body-background-light};
+    --body-background-default: var(#{--body-background-dark});
+
+    //components-background
+    --components-background-dark: #{$components-background-dark};
+    --components-background-light: #{$components-background-light};
+    --components-background-default: var(#{--components-background-dark});
+
+    //card-background
+    --card-background-dark: #{$card-background-dark};
+    --card-background-light: #{$card-background-light};
+    --card-background-default: var(#{--card-background-dark});
+
+    //card-shadow
+    --card-box-shadow-dark: #{$card-box-shadow-dark};
+    --card-box-shadow-light: #{$card-box-shadow-light};
+    --card-box-shadow-default: var(#{--card-box-shadow-dark});
+
+    //text
+    --text-color-dark: #{$dark-color};
+    --text-color-light: #{$light-color};
+    --text-color-default: var(#{--text-color-dark});
+}

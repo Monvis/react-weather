@@ -13,8 +13,8 @@
     padding: 42px 42px 32px 42px;
     height: 300px;
     border-radius: 20px;
-    box-shadow: $shadow-box;
-    background-color: $dark-card-bg;
+    box-shadow: var(#{--card-box-shadow-default});
+    background-color: var(#{--components-background-default});
 }
 
 .blur {
@@ -54,16 +54,16 @@
 
 .bottom__block_wrapper {
     font-size: 25px;
-    color: $dark-card-text-color;
+    color: $base-color;
 }
 
 .this__day {
     max-height: 300px;
     display: inline-block;
     padding: 30px 20px 20px 20px;
-    box-shadow: $shadow-box;
+    box-shadow: var(#{--card-box-shadow-default});
     border-radius: 20px;
-    background-color: $dark-card-bg;
+    background-color: var(#{--components-background-default});
 }
 
 .this__time,
@@ -78,7 +78,7 @@
 .this__day_day {
     margin-bottom: 12px;
     font-size: 25px;
-    color: $ligth;
+    color: var(#{--text-color-default});
 }
 
 .this__day_icon {

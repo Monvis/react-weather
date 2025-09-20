@@ -8,8 +8,8 @@
     padding: 42px 0 32px 42px;
     height: 300px;
     border-radius: 20px;
-    box-shadow: $shadow-box;
-    background-color: $dark-card-bg;
+    box-shadow: var(#{--card-box-shadow-default});
+    background-color: var(#{--components-background-default});
 
     img {
         position: absolute;
@@ -51,10 +51,10 @@
     font-size: 14px;
     width: 100px;
     margin-right: 20px;
-    color: $dark-card-text-color;
+    color: $base-color;
 }
 
 .indicator__title {
     font-size: 14px;
-    color: $ligth;
+    color: var(#{--text-color-default});
 }

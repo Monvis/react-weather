@@ -18,7 +18,8 @@ $maxWidth: ( 1200 );
 body {
     position: relative;
     font-family: "Montserrat", sans-serif;
-    background-color: $dark;
+    transition: 0.4s;
+    background: var(#{--body-background-default});
 }
 
 .container {
