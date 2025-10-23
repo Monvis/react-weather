@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { ChangeCssRootVariables } from '../model/ChangeCssRootVariables'
+import { storage } from '../model/Storage';
 
 const ThemeContext = React.createContext({
   theme: 'light',
@@ -7,10 +8,16 @@ const ThemeContext = React.createContext({
 });
 
 export const ThemeProvider = (({children}) => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(() => {
+    return storage.getItem('theme') || 'light'
+  })
+
+  ChangeCssRootVariables(theme)
 
   const toggleTheme = () => {
-    setTheme(theme === 'light'? 'dark' : 'light')
+    const newTheme = theme === 'light'? 'dark' : 'light'
+    setTheme(newTheme)
+    storage.setItem('theme', newTheme)
     ChangeCssRootVariables(theme)
   }
 
