@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home/components/Home';
 import { MonthStatistics } from './pages/MonthStatistics/components/MonthStatistics';
@@ -9,7 +9,7 @@ import './styles/index.scss';
 function App() {
   return (
     <div className='global-container'>
-      <Popup />
+      {/* <Popup /> */}
       <div className='container'>
           <Header />
           <Routes>

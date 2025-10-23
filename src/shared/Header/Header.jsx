@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { GlobalSvgSelector } from '../../assets/icons/global/globalSvgSelector'
+import React from 'react'
 import Select from 'react-select'
+import { GlobalSvgSelector } from '../../assets/icons/global/globalSvgSelector'
+import { useTheme } from '../../context/ThemeProvider'
 import s from './Header.module.scss'
 
 export const Header = () => {
+  const { theme, toggleTheme } = useTheme();
+
   const options = [
       { value: 'city-1', label: 'Москва' },
       { value: 'city-2', label: 'Санкт-Петербург' },
@@ -27,31 +30,6 @@ export const Header = () => {
     })
   }
 
-  const [theme, setTheme] = useState('light')
-
-  const changeTheme = () => {
-    setTheme(theme === 'light'? 'dark' : 'light')
-  }
-
-  useEffect(() => {
-    const root = document.querySelector(':root')
-
-    const components = [
-      'body-background',
-      'components-background',
-      'card-background',
-      'card-box-shadow',
-      'text-color'
-    ]
-
-    components.map((elem) => {
-      root.style.setProperty(
-        `--${elem}-default`,
-        `var(--${elem}-${theme})`
-      )
-    })
-  }, [theme])
-
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
@@ -63,7 +41,7 @@ export const Header = () => {
         </div>
       </div>
       <div className={s.wrapper}>
-        <div onClick={changeTheme} className={s.change_theme}>
+        <div onClick={toggleTheme} className={s.change_theme}>
           <GlobalSvgSelector id='change-theme' />
         </div>
         <Select className={s.select} options={options} defaultValue={options[0]} styles={colourStyles} />
